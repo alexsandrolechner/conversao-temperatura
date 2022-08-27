@@ -1,0 +1,28 @@
+
+# Iniciando um Banco de dados MongoDB em um container Docker
+
+version: '3'
+
+services:
+  conversao-temperatura:
+    image: alexsandrolechner/conversao-temperatura:v1
+    ports:
+    - 8080:8080
+    container_name: 'conversao-temperatura'
+    restart: always # iniciar com o servidor
+
+
+  conversao-distancia:
+    image: alexsandrolechner/conversao-distancia:v1
+    ports:
+    - 5000:5000
+    container_name: 'conversao-distancia'
+    restart: always # iniciar com o servidor
+
+  conversao-peso:
+    image: alexsandrolechner/conversao-peso:v1
+    ports:
+    - 8082:80
+    - 443:443
+    container_name: 'conversao-peso'
+    restart: always # iniciar com o servidor
