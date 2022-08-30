@@ -5,7 +5,7 @@ version: '3'
 
 services:
   conversao-temperatura:
-    image: alexsandrolechner/conversao-temperatura:v1
+    image: alexsandrolechner/conversao-temperatura:${TAG}
     ports:
     - 8080:8080
     container_name: 'conversao-temperatura'
@@ -13,14 +13,14 @@ services:
 
 
   conversao-distancia:
-    image: alexsandrolechner/conversao-distancia:v1
+    image: alexsandrolechner/conversao-distancia:${TAG}
     ports:
     - 5000:5000
     container_name: 'conversao-distancia'
     restart: always # iniciar com o servidor
 
   conversao-peso:
-    image: alexsandrolechner/conversao-peso:v1
+    image: alexsandrolechner/conversao-peso:${TAG}
     ports:
     - 8081:80
     container_name: 'conversao-peso'
